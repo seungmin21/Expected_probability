@@ -16,6 +16,10 @@ def simulate_draws(items, probabilities, num_simulations):
     
     return results
 
+def print_results(results):
+    for item, count in results.items():
+        print(f"{item}는 {count}번 뽑혔습니다.")
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="뽑기 시뮬레이션")
     parser.add_argument('--config', type=str, required=True, help="사용할 뽑기의 설정 파일 경로")
@@ -24,4 +28,4 @@ if __name__ == "__main__":
     items, probabilities, num_simulations = load_config(args.config)
     results = simulate_draws(items, probabilities, num_simulations)
     
-    print(f"뽑기 결과 ({args.config}):", results)
+    print_results(results)
