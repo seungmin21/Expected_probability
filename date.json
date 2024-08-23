@@ -1,0 +1,5 @@
+{
+  "items": ["A", "B", "C", "D", "E"],
+  "probabilities": [0.06, 0.10, 0.20, 0.32, 0.32],
+  "simulations": 20
+}
